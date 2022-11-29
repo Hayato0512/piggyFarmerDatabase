@@ -135,5 +135,9 @@ returnedPig:any;
     }
    })
   }
+ calcelClicked(){
+
+    this.router.navigate(['/home'])
+ }
 
 }

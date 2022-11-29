@@ -1,22 +1,24 @@
+<div class="createFormContainer">
 <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
 <input type="text" name = "personName" ngModel placeholder="person name"><br>
 <input type="text" name = "personPhone" ngModel placeholder="person phone"><br>
 <input type="text" name = "pigBreed" ngModel placeholder="pig breed"><br>
 <input type="text" name = "pigId" ngModel placeholder="pig id"><br>
 <input type="text" name = "extraNote" ngModel placeholder="extra note"><br>
-<input type="text" name = "status" ngModel placeholder="status" visibility="hidden"><br>
+<input type="hidden" name = "status" ngModel placeholder="status" visibility="hidden"><br>
 <form  [formGroup]="locationForm "(ngSubmit)="submit()">
     <p>
+        Location: 
       <select formControlName="unko">
         <option [ngValue]="12" disabled>Select Location</option>
         <option *ngFor="let l of locationNameArray" [ngValue]="l" >{{l}}</option>
         <option  [ngValue]="99" >Enter a new location</option>
       </select>
-      <button type="submit">Submit</button>
     </p>
     </form>
 <form  [formGroup]="statusForm "(ngSubmit)="submit()">
     <p>
+        Status: 
       <select formControlName="status">
         <option [ngValue]="12" disabled>Select Status</option>
         <option *ngFor="let l of statusArray" [ngValue]="l" >{{l}}</option>
@@ -26,7 +28,9 @@
 <input [type]="isHidden" name = "locationName" ngModel  placeholder="location name" ><br>
 <input [type]="isHidden" name = "locationLat"  ngModel  placeholder="location latitude" ><br>
 <input [type]="isHidden" name = "locationLong" ngModel  placeholder="location longitude"><br>
-
-
-<button type="submit">submit data</button>
-</form>
+<section class="createButtonContainer">
+<button type="submit">Submit Data</button>
+<button (click)="calcelClicked()">Cancel</button>
+</section>
+  
+<!-- </div> -->

@@ -170,6 +170,10 @@ var yyyy = today.getFullYear();
     return num.toString().padStart(2, '0');
   }
   
+ calcelClicked(){
+
+    this.router.navigate(['/home'])
+ }
    formatDate(date: Date) {
     return (
       [

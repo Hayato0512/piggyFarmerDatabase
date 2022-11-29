@@ -1,0 +1,18 @@
+.createFormContainer{
+    margin-left: 30px;
+    display: flex;
+    justify-content:center;
+}
+input{
+    margin-bottom: 10px;
+    width: 90%;
+}
+.createButtonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+/* button{
+    width: 70%;
+} */

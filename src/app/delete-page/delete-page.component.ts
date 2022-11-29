@@ -41,6 +41,10 @@ hashedPasswordObject:any;
    })
  } 
 
+ calcelClicked(){
+
+    this.router.navigate(['/home'])
+ }
   onDelete() {
     try {
     var theLocationName:string ;

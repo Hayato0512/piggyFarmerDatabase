@@ -4,22 +4,27 @@
       </div>
       <section class="container">
         <section class="deleteDetailContainer">
+            <section class="deleteTitleContainer">
 <h1>Delete page</h1>
-<p>What is up with you guys???</p>
-<p>{{chosenPigId}}</p>
-<p>{{returnedPig.key}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.personInfo.name}}</p>
-<p>{{returnedPig.data.personInfo.phone}}</p>
-<button>Cancel</button>
-
+            </section>
+ <section class="deletePigDetailContainer">
+<p>Pig ID:  {{chosenPigId}}</p>
+<p>Pig Breed:  {{returnedPig.data.pigInfo.breed}}</p>
+<p>Location:   {{returnedPig.data.Location.name}}</p>
+<p>Reporting Person Name:  {{returnedPig.data.personInfo.name}}</p>
+<p>Reporting Person Phone:  {{returnedPig.data.personInfo.phone}}</p>
+<p>Time and Date:   {{returnedPig.data.timeAndDate}}</p>
+<p>Status : {{returnedPig.data.status}}</p>
+            </section>
 <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+    <section class="inputSection">
 <input type="text" name = "password" ngModel placeholder="enter the password"><br>
+    </section>
 <h4 [hidden]="isHidden"> password incorrect</h4>
+<section class="buttonSection">
 <button type="submit" >Delete</button>
+<button (click)="calcelClicked()">Cancel</button>
+</section>
 </form>
         </section>
       </section>

@@ -13,6 +13,30 @@ body{
     width: 500px;
     height: 600px;
 }
+.deleteTitleContainer{
+    padding:10px;
+    display: flex;
+    justify-content:center;
+}
+.deletePigDetailContainer{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+p{
+    border-bottom: 1px solid gray;
+}
+.inputSection{
+    display: flex;
+    justify-content: center;
+}
+input{
+    width: 70%;
+}
+.buttonSection{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
 .topnav {
     background-color: rgb(172, 218, 202);
     width: 100%;

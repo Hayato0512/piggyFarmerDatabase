@@ -38,8 +38,10 @@ export class MapComponent {
       this.locationArray = data
       console.log(this.locationArray);
       this.locationArray.forEach(location=>{
+        if(location.data.count!=0){
     const marker1 = L.marker([location.data.lat, location.data.long]).addTo(this.map)
     marker1.bindPopup(`${location.data.count} pig(s) found here`).openPopup()
+        }
       })
 
       //ok, now, we have all the cities. next, show them in the drop down menu. 

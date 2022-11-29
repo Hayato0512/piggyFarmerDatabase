@@ -1,23 +1,36 @@
-<p>more-info-page works!</p>
-<p>What is up with you guys???</p>
-<p>{{chosenPigId}}</p>
-<p>{{returnedPig.key}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.status}}</p>
-<p>{{returnedPig.data.personInfo.name}}</p>
-<p>{{returnedPig.data.personInfo.phone}}</p>
+<body>
+    <div class="topnav">
+        <h2 >Farmer Hoggett DataBase - Lost Pig Finder</h2>
+      </div>
+<section class="container">
+<section class="moreInfoDetailContainer">
+  <section class="moreInfoTitleContainer">
 
+  <h1>More Info</h1>
+  </section>
 
+            <section class="moreInfoEntriesContainer">
 <form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
-<input type="text" name = "personName" ngModel="{{returnedPig.data.personInfo.name}}"  ><br>
-<input type="text" name = "personPhone" ngModel="{{returnedPig.data.personInfo.phone}}" placeholder="person phone" value="hey"><br>
-<input type="text" name = "pigBreed" ngModel="{{returnedPig.data.pigInfo.breed}}" placeholder="pig breed" value="hey"><br>
-<input type="text" name = "pigId" ngModel="{{returnedPig.data.pigInfo.pid}}" placeholder="pig id"><br>
-<input type="text" name = "locationName" ngModel="{{returnedPig.data.Location.name}}" placeholder="location name"><br>
-<input type="text" name = "extraNote" ngModel="{{returnedPig.data.extraNote}}" placeholder="extra note"><br>
-
+  <section class="entryContainer">
+    Pig ID:   <input type="text" name = "pigId" ngModel="{{returnedPig.data.pigInfo.pid}}" placeholder="pig id"><br>
+  </section>
+            <section class="entryContainer">
+              Pig Breed:  <input type="text" name = "pigBreed" ngModel="{{returnedPig.data.pigInfo.breed}}" placeholder="pig breed" value="hey"><br>
+            </section>
+            <section class="entryContainer">
+              Location:  <input type="text" name = "locationName" ngModel="{{returnedPig.data.Location.name}}" placeholder="location name"><br>
+            </section>
+            <section class="entryContainer">
+              Reporting Person Name:  <input type="text" name = "personName" ngModel="{{returnedPig.data.personInfo.name}}" placeholder=""><br>
+            </section>
+            <section class="entryContainer">
+              Reporting Person Phone:  <input type="text" name = "personPhone" ngModel="{{returnedPig.data.personInfo.phone}}" placeholder="person phone" value="hey"><br>
+            </section>
+            <section class="entryContainer">
+              <p>Time and Date:   {{returnedPig.data.timeAndDate}}</p>
+            </section>
+            <section class="statusEntryContainer">
+              Status :     
 <form [formGroup]="statusForm" (ngSubmit)="submit()">
      <p>
       <select formControlName="status">
@@ -25,12 +38,24 @@
         <!-- <option *ngFor="let s of statusEnum" [ngValue]="s.id">{{s.name}}</option> -->
         <option *ngFor="let s of statusArray" [ngValue]="s">{{s}}</option>
       </select>
-     
-      <button type="submit">Submit</button>
     </p>
     </form>
+            </section>
 
-<input type="text" name = "password" ngModel placeholder="enter the password"><br>
+
+    <section class="inputSection">
+<input  class="inputContainer"type="text" name = "password" ngModel placeholder="enter the password"><br>
+    </section>
 <h4 [hidden]="isHidden"> password incorrect</h4>
-<button type="submit">submit data</button>
+<section class="buttonSection">
+<button type="submit">Update Data</button>
+<button (click)="calcelClicked()">Cancel</button>
+</section>
 </form>
+            </section>
+</section>
+</section>
+<p>{{returnedPig.data.personInfo.phone}}</p>
+
+
+</body>
