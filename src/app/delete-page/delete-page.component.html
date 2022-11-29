@@ -1,0 +1,26 @@
+<body>
+    <div class="topnav">
+        <h2 >Farmer Hoggett DataBase - Lost Pig Finder</h2>
+      </div>
+      <section class="container">
+        <section class="deleteDetailContainer">
+<h1>Delete page</h1>
+<p>What is up with you guys???</p>
+<p>{{chosenPigId}}</p>
+<p>{{returnedPig.key}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.personInfo.name}}</p>
+<p>{{returnedPig.data.personInfo.phone}}</p>
+<button>Cancel</button>
+
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+<input type="text" name = "password" ngModel placeholder="enter the password"><br>
+<h4 [hidden]="isHidden"> password incorrect</h4>
+<button type="submit" >Delete</button>
+</form>
+        </section>
+      </section>
+</body>

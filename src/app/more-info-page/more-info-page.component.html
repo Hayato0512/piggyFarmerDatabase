@@ -1,0 +1,36 @@
+<p>more-info-page works!</p>
+<p>What is up with you guys???</p>
+<p>{{chosenPigId}}</p>
+<p>{{returnedPig.key}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.status}}</p>
+<p>{{returnedPig.data.personInfo.name}}</p>
+<p>{{returnedPig.data.personInfo.phone}}</p>
+
+
+<form #userPost="ngForm" (ngSubmit)="onSubmit(userPost.value)">
+<input type="text" name = "personName" ngModel="{{returnedPig.data.personInfo.name}}"  ><br>
+<input type="text" name = "personPhone" ngModel="{{returnedPig.data.personInfo.phone}}" placeholder="person phone" value="hey"><br>
+<input type="text" name = "pigBreed" ngModel="{{returnedPig.data.pigInfo.breed}}" placeholder="pig breed" value="hey"><br>
+<input type="text" name = "pigId" ngModel="{{returnedPig.data.pigInfo.pid}}" placeholder="pig id"><br>
+<input type="text" name = "locationName" ngModel="{{returnedPig.data.Location.name}}" placeholder="location name"><br>
+<input type="text" name = "extraNote" ngModel="{{returnedPig.data.extraNote}}" placeholder="extra note"><br>
+
+<form [formGroup]="statusForm" (ngSubmit)="submit()">
+     <p>
+      <select formControlName="status">
+        <option [ngValue]="null" disabled>{{returnedPig.data.status}}</option>
+        <!-- <option *ngFor="let s of statusEnum" [ngValue]="s.id">{{s.name}}</option> -->
+        <option *ngFor="let s of statusArray" [ngValue]="s">{{s}}</option>
+      </select>
+     
+      <button type="submit">Submit</button>
+    </p>
+    </form>
+
+<input type="text" name = "password" ngModel placeholder="enter the password"><br>
+<h4 [hidden]="isHidden"> password incorrect</h4>
+<button type="submit">submit data</button>
+</form>

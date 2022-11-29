@@ -1,0 +1,13 @@
+.pigTableSection{
+
+    overflow-y: scroll;
+    height: 260px;
+}
+.pigTable{
+    background-color: ivory;
+    width: 100%;
+
+}
+.tableEntry{
+    background-color: darkgray;
+}
