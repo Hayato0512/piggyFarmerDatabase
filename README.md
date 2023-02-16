@@ -1,16 +1,7 @@
 # Piggy Farmer Database
 > A web database system for pig famers in BC to keep track of their piggies, as well as finding lost piggies in the city.
 
-## Table of Contents
-* [General Info](#general-information)
-* [Features](#features)
-* [Motivation](#motivation--what-problem-does-it-intend-to-solve?)
-* [Technologies Used](#technologies-used)
-* [Screenshots](#screenshots)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
+
 <!-- * [License](#license) -->
 <!--
 * [Setup](#setup)
